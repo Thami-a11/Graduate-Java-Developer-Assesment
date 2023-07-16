@@ -70,11 +70,11 @@ public class ImageController {
     public FileSystemResource gethttpImageLink(@PathVariable String name, @PathVariable String surname)
     {
         var link = accountProfileService.getHttpLink(name,surname);
-        FileSystemResource fSr;
+        FileSystemResource f;
 
         if (link != null) {
-             fSr = new FileSystemResource(link.getPath());
-            return fSr;
+             f = new FileSystemResource(link.getPath());
+            return f;
         }
         else{
             return null;
